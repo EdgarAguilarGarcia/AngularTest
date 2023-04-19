@@ -1,0 +1,10 @@
+<h2>Mejores juegos online gratuitos</h2>
+<div class="heroes-menu">
+  <a *ngFor="let hero of heroes"
+      routerLink="/detail/{{hero.id}}">
+      Juego: {{hero.name}}
+      Calificacion: {{hero.power}}
+  </a>
+</div>
+
+<app-hero-search></app-hero-search>

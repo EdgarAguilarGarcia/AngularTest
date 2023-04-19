@@ -1,0 +1,21 @@
+<h2>Juegos </h2>
+
+<div>
+  <label for="new-hero">Nombre del juego: </label>
+  <input id="new-hero" #heroName style="width: 20cm;"/>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Agregar juego
+  </button>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button type="button" class="delete" title="delete hero"
+      (click)="delete(hero)">X</button>
+  </li>
+</ul>

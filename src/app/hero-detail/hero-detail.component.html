@@ -1,0 +1,14 @@
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} <br> Detalles de juego</h2>
+  <div><span>ID: </span>{{hero.id}}</div>
+  <div>
+    <label for="hero-name">Nombre del juego: </label>
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Team name"/>
+  </div>
+  <div>
+    <label for="hero-power">Calificacion final: </label>
+    <input id="hero-power" [(ngModel)]="hero.power" placeholder="Team performance"/>
+  </div>
+  <button type="button" (click)="goBack()">Regresar</button>
+  <button type="button" (click)="save()">Guardar</button>
+</div>
